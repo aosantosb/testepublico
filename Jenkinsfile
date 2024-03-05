@@ -5,10 +5,9 @@ pipeline {
             steps {
                 script {
                     // Executar o build do projeto C#
-                    bat '"C:\\MSBuild\\Bin\\msbuild.exe" TestePublico.csproj /c:Rebuild'
+                    bat '"C:\\msbuild\\bin\\msbuild.exe" TestePublico.csproj /t:Rebuild'
                 }
             }
         }
     }
 }
-
