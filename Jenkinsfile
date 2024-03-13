@@ -10,4 +10,11 @@ pipeline {
             }
         }
     }
+    stage('SonarQube analysis') {
+            steps {
+                withSonarQubeEnv('SonarQube Server') {
+                    bat '"C:\\caminho\\para\\o\\sonar-scanner.bat"'
+                }
+            }
+        }
 }
