@@ -11,7 +11,7 @@ pipeline {
         }
 	stage('SonarQube analysis') {
             steps {
-                withSonarQubeEnv('SonarQube Server') {
+                withSonarQubeEnv('http://localhost:9001/') {
                     bat '"C:\\sonarqube\\sonarscanner\\bin\\sonar-scanner.bat"'
                 }
             }
